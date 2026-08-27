@@ -2,10 +2,8 @@
 
 ## Download & run
 
-1. Click the green **Code** button at the top of this page → **Download ZIP**
-   (or grab a build from the [Releases](../../releases) page if one is posted).
-2. Unzip it anywhere.
-3. Run **`overlay.exe`**. No arguments, any order:
+1. Unzip it anywhere.
+2. Run **`overlay.exe`**. No arguments, any order:
    - launch it before Roblox, after it, or mid-match — it attaches by itself.
    - a status card paints immediately: `waiting for Roblox` → `found - attaching` →
      `reading memory` → `ATTACHED` (fades after 4 s).
