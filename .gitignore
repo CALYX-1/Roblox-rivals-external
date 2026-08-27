@@ -1,0 +1,17 @@
+# build artifacts
+*.obj
+build.log
+
+# runtime output (written next to the exe)
+overlay_live.txt
+overlay_log.txt
+overlay_perf.txt
+overlay_*.txt
+*.bmp
+
+# packaging output
+dist/
+*.zip
+
+# private dev notes — never publish
+HANDOFF.md
