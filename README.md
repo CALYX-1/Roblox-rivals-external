@@ -25,4 +25,4 @@ gain table. It rewrites itself; delete it to reset.
 
 ## Roblox updates
 
- Last verified good on client **0.735.3** (`version-17d504d2c9544583`).
+ Last verified good on client (`version-f5a60436d48947d3`).
