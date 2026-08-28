@@ -4,7 +4,7 @@
 
 1. Unzip it anywhere.
 2. Run **`overlay.exe`**. No arguments, any order:
-   - launch it before Roblox, after it, or mid-match — it attaches by itself.
+   - launch it before Roblox, after it, or mid-match — it attaches by itself. ( best if you launch while in rivals itself )
    - a status card paints immediately: `waiting for Roblox` → `found - attaching` →
      `reading memory` → `ATTACHED` (fades after 4 s).
    - it detaches and re-cards on a rejoin or game close; a second copy just exits.
