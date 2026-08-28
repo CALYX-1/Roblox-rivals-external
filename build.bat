@@ -1,5 +1,5 @@
 @echo off
-REM build.bat            - build overlay.exe (the whole app)
+REM build.bat            - build overlay.exe (the whole app).
 REM build.bat <src.cpp>  - build any other single-file tool next to it
 setlocal
 call "C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Auxiliary\Build\vcvars64.bat" >nul 2>&1
