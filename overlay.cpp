@@ -1,4 +1,4 @@
-// overlay.cpp - Rivals external overlay, v1.
+// overlay.cpp - Rivals external overlay, v1..
 // A transparent, click-through, topmost layered window with a software ARGB
 // rasterizer, world-to-screen, and a DataSource seam. v1 runs on a MOCK camera
 // and orbiting fake entities to prove projection + rendering before the memory
