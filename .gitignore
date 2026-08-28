@@ -13,5 +13,5 @@ overlay_*.txt
 dist/
 *.zip
 
-# private dev notes — never publish
+
 HANDOFF.md
