@@ -2955,6 +2955,24 @@ static void splitArgs(const std::string& cmd, std::vector<std::string>& out){
 }
 
 int WINAPI WinMain(HINSTANCE hInst,HINSTANCE,LPSTR lpCmd,int){
+    // DPI-aware so a scaled (125/150%) display doesn't shift the overlay off the
+    // game. Resolved at runtime so it compiles and runs on any Windows: on
+    // Win10 1703+ it asks for per-monitor-v2, and older systems fall back to
+    // system-DPI-aware, and anything that rejects both just runs as-is.
+    typedef BOOL(WINAPI*SpdacFn)(HANDLE);
+    SpdacFn spdac=(SpdacFn)GetProcAddress(GetModuleHandleA("user32.dll"),"SetProcessDpiAwarenessContext");
+    if(spdac){
+        HANDLE pmv2=(HANDLE)(-4); // DPI_AWARENESS_CONTEXT_PER_MONITOR_AWARE_V2
+        if(!spdac(pmv2)){
+            typedef BOOL(WINAPI*SpdaFn)(void);
+            SpdaFn spda=(SpdaFn)GetProcAddress(GetModuleHandleA("user32.dll"),"SetProcessDPIAware");
+            if(spda) spda();
+        }
+    } else {
+        typedef BOOL(WINAPI*SpdaFn)(void);
+        SpdaFn spda=(SpdaFn)GetProcAddress(GetModuleHandleA("user32.dll"),"SetProcessDPIAware");
+        if(spda) spda();
+    }
     initFont();
     cfgLoad();                       // remembered toggles + the cached DataModel RVA
     std::vector<std::string> args;

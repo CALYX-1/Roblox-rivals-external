@@ -6,7 +6,7 @@ call "C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Auxiliary\
 pushd "%~dp0"
 if "%~1"=="" (
   cl /nologo /EHsc /std:c++17 /D_CRT_SECURE_NO_WARNINGS ^
-     /O2 /Oi /Ot /GL /Gw /Gy /GS- /fp:fast /arch:AVX2 ^
+     /O2 /Oi /Ot /GL /Gw /Gy /GS- /fp:fast ^
      overlay.cpp /Fe:overlay.exe ^
      /link /SUBSYSTEM:WINDOWS /LTCG /OPT:REF /OPT:ICF user32.lib gdi32.lib winmm.lib >build.log 2>&1
 ) else (
